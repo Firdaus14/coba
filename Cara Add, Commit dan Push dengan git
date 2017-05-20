@@ -1,0 +1,146 @@
+
+
+##Here is a list of commonly used git commands
+
+Source : http://shabeebk.com
+
+1.  Initiate a directory as git
+
+    git init --bare
+
+2.  Git clone
+
+    git clone url-to-git
+
+    example URL :user@domain.com:/home-path/username/directory/
+
+3.  Git status
+
+    it will show the files status - modified, tracking , untracked
+
+    git status
+
+4.  Git Add for tracking
+
+    git add filename
+
+    or
+
+    git add .
+
+    dot is using to add all files
+
+5.  Git commit
+
+    git commit -m "commit message"
+
+    If the file is under git track we can combine both comments in one line like
+
+    git commit -am "your-message"
+
+    or
+
+    git commit -a -m "your-message"
+
+    -a to add
+
+    -m to commit message
+
+6.  Push your changes to server
+
+    git push
+
+    or
+
+    git push branch
+
+7.  Creating branch in git
+
+    git branch branch-name
+
+8.  Switch to branch
+
+    git checkout branch-name
+
+9.  Create a new branch and switch to new branch
+
+    git checkout -b branch name
+
+10. List all the branches
+
+    git branch -a
+
+12. Merge Branch
+
+    Consider we have master branch A and another branch B, To merge branch B changes to branch A,
+
+     git merge branch B```
+
+     if any conflict happened, it will show conflict, we have to do modification and commit again.
+
+13. Delete a branch
+
+    ```git branch -d ``
+
+    this will delete if all the changes are merged, if you want to use force delete , even not merged,
+
+    git branch -D <branch name>
+
+14. Upload branch into server at setting head for push
+
+    git push --set-upstream origin <branch name>
+
+15. Stash all local changes
+
+    git stash
+
+16. Take back stashed changes - This will take aback all the changes you stashed
+
+    git stash pop
+
+17. Discard changes on one file
+
+    git checkout filename
+
+18. Remove local commit and reset to server head - it will delete all the local changes
+
+    git reset --hard origin/branch name
+
+19. List all the branches push/pull remote origin.
+
+    This will show all the remote and local branches and where it is pointing into
+
+    git remote show origin
+
+20. Fetch and push origin list
+
+    git remote -v
+
+21. View uncommitted changes made
+
+    git diff
+
+22. To see all the logs
+
+    git log
+
+23. To see log with difference
+
+    git log -p
+
+24.    Git log for a single file
+
+    git log -p file/path
+
+    -p will give changes also
+
+25. Other options with git log
+
+    git log --stat //this will show only number of files changed and number of changes
+
+    git log --pretty=oneline //show all the changes in one line with head and comment
+
+    git log --pretty=format:"%h - %an, %ar : %s" //show with name time and commit message
+
+    git log --author=username //show only one user commit
+
